@@ -1,0 +1,25 @@
+<div class="center">
+  <div *ngFor="let field of this.fields;index as i">
+    <div class="userIcon">
+      <div class="splitTheBill-user">
+      </div>
+      <div class="input-field national-id pull-left">
+        <input id="form3"  class="form-control" type="text" [(ngModel)] = "field.value" (click) = "fillInputValue(field,i)">
+        {{field.value}}
+        <label for="form3" class="">{{ field.name}}</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="b">
+  <button (click) = "populateData()">+</button>
+  </div>
+  <div class="b">
+  <button (click)="sendData()"> Next>></button>
+  </div>
+   <div *ngIf="this.fields.length>0 && this.orgFields.length>0 && this.fields.length==this.orgFields.length">
+  <app-field-database-mapping [fieldsToExport] = 'orgFields'>
+</app-field-database-mapping>
+</div>
+

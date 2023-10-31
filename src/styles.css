@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+div.b {
+    font-size: 60px;
+    margin-left: 850px;
+    margin-top: 250px;
+  }
+  .center {
+    text-align: center;
+  }
+  
